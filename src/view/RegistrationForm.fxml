@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="496.0" prefWidth="495.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cryptography.RegistrationFormController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="500.0" prefWidth="499.0">
+         <children>
+            <ImageView fitHeight="510.0" fitWidth="510.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/template.png" />
+               </image>
+            </ImageView>
+            <JFXTextField fx:id="username" focusColor="WHITE" layoutX="186.0" layoutY="211.0" prefHeight="31.0" prefWidth="173.0" promptText="korisničko ime" unFocusColor="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></JFXTextField>
+            <JFXPasswordField fx:id="password" focusColor="WHITE" layoutX="186.0" layoutY="252.0" prefHeight="34.0" prefWidth="173.0" promptText="lozinka" unFocusColor="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></JFXPasswordField>
+            <JFXButton layoutX="179.0" layoutY="365.0" onAction="#signButton" prefHeight="14.0" prefWidth="154.0" text="." textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="certificatePath" focusColor="WHITE" layoutX="186.0" layoutY="293.0" prefHeight="25.0" prefWidth="173.0" promptText="sertifikat" unFocusColor="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <ImageView fitHeight="23.0" fitWidth="21.0" layoutX="156.0" layoutY="303.0" onMouseClicked="#handlePath" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/search.png" />
+               </image>
+            </ImageView>
+            <JFXTextField fx:id="privateKeyPath" focusColor="WHITE" layoutX="186.0" layoutY="325.0" prefHeight="25.0" prefWidth="173.0" promptText="ključ" unFocusColor="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <ImageView fitHeight="21.0" fitWidth="21.0" layoutX="157.0" layoutY="331.0" onMouseClicked="#handlePathPrivateKey" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/search.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="21.0" fitWidth="21.0" layoutX="475.0" layoutY="14.0" onMouseClicked="#handleClose" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/close-button.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

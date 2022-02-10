@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="434.0" prefWidth="681.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cryptography.MainFormController">
+   <children>
+      <TabPane layoutX="-2.0" layoutY="32.0" prefHeight="406.0" prefWidth="688.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Root">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <HBox layoutX="126.0" layoutY="98.0" prefHeight="40.0" prefWidth="452.0">
+                           <children>
+                              <JFXButton onAction="#handleNewButton" prefHeight="30.0" prefWidth="83.0" style="-fx-background-color: #171B38;" text="Kreiraj" textFill="WHITE" />
+                              <JFXButton onAction="#handleOpenButton" prefHeight="30.0" prefWidth="83.0" style="-fx-background-color: #171B38;" text="Otvori" textFill="WHITE">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton onAction="#handleUploadButton" prefHeight="30.0" prefWidth="83.0" style="-fx-background-color: #171B38;" text="Upload" textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton onAction="#handleDownloadButton" prefHeight="30.0" prefWidth="83.0" style="-fx-background-color: #171B38;" text="Preuzmi" textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton onAction="#handleDeleteButton" prefHeight="30.0" prefWidth="83.0" style="-fx-background-color: #171B38;" text="Obriši" textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                        <JFXComboBox fx:id="comboRoot" layoutX="126.0" layoutY="164.0" prefHeight="25.0" prefWidth="451.0" />
+                        <TextField fx:id="pathUploadRoot" layoutX="89.0" layoutY="12.0" prefHeight="25.0" prefWidth="595.0" />
+                        <Button layoutX="17.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleChooseButtonRoot" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: #171B38;" text="Izaberi" textFill="WHITE" />
+                        <GridPane layoutX="124.0" layoutY="53.0" prefHeight="26.0" prefWidth="456.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="128.0" minWidth="10.0" prefWidth="119.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="120.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label prefHeight="25.0" prefWidth="137.0" text="Algoritam za enkripciju" />
+                              <Label prefHeight="25.0" prefWidth="135.0" text="    Hash algoritam" textAlignment="CENTER" GridPane.columnIndex="2" />
+                              <ComboBox fx:id="comboBoxEncRoot" prefWidth="150.0" GridPane.columnIndex="1" />
+                              <ComboBox fx:id="comboBoxHashRoot" prefHeight="25.0" prefWidth="120.0" GridPane.columnIndex="3" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Dijeljeni ">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="209.0" layoutY="283.0" mnemonicParsing="false" onAction="#handleDekPorukuButton" prefHeight="26.0" prefWidth="84.0" style="-fx-background-color: #171B38;" text="Preuzmi" textFill="WHITE" />
+                        <ComboBox fx:id="comboSharedFile" layoutX="144.0" layoutY="238.0" prefHeight="25.0" prefWidth="147.0" />
+                        <TextField fx:id="path" layoutX="89.0" layoutY="12.0" prefHeight="25.0" prefWidth="595.0" />
+                        <Button layoutX="17.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleSearchButton" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: #171B38;" text="Izaberi" textFill="WHITE" />
+                        <Label layoutX="14.0" layoutY="52.0" prefHeight="17.0" prefWidth="127.0" text="Algoritam za enkripciju" />
+                        <ComboBox fx:id="comboKript" layoutX="143.0" layoutY="48.0" prefWidth="150.0" />
+                        <Label layoutX="15.0" layoutY="99.0" text="Hash algoritam" />
+                        <ComboBox fx:id="comboPotpis" layoutX="143.0" layoutY="95.0" prefWidth="150.0" />
+                        <Label layoutX="14.0" layoutY="145.0" text="Primalac" />
+                        <ComboBox fx:id="comboPrimaoc" layoutX="143.0" layoutY="141.0" prefWidth="150.0" />
+                        <Button layoutX="209.0" layoutY="182.0" mnemonicParsing="false" onAction="#handlePosaljiButton" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: #171B38;" text="Pošalji" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Pane prefHeight="34.0" prefWidth="686.0" style="-fx-background-color: #171B38;">
+         <children>
+            <Label fx:id="labelaKor" layoutX="9.0" layoutY="6.0" prefHeight="26.0" prefWidth="72.0" text="Label" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="619.0" onMouseClicked="#handleLogoutButton" prefHeight="34.0" prefWidth="66.0" text="     Odjava" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
